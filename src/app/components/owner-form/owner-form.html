@@ -1,17 +1,18 @@
-<h2>Registrar Proprietário</h2>
-<form (ngSubmit)="onSubmit()" #ownerForm="ngForm">
+<div class="principal">
+    <h2>Registrar Proprietário</h2>
+    <form (ngSubmit)="onSubmit()" #ownerForm="ngForm" class="form-owner">
+        <label>Nome:</label>
+        <input type="text" name="name" [(ngModel)]="owner.name" required />
 
-    <label>Nome:</label>
-    <input type="text" name ="name" [(ngModel)]="owner.name"  required/>
+        <label>Email:</label>
+        <input type="email" name="email" [(ngModel)]="owner.email" required />
 
-    <label>Email:</label>
-    <input type="email" name ="email" [(ngModel)]="owner.email" required/>
+        <label>Senha:</label>
+        <input type="password" name="password" [(ngModel)]="owner.password" required />
 
-    <label>Senha:</label>
-    <input type="password" name ="password" [(ngModel)]="owner.password" required/>
+        <label>Telefone:</label>
+        <input type="text" name="phone" [(ngModel)]="owner.phone" required />
 
-    <label>Telefone:</label>
-    <input type="text" name ="phone" [(ngModel)]="owner.phone" required/>
-
-    <button type="submit" [disabled]="ownerForm.invalid">Salvar</button>
-</form>
+        <button type="submit" [disabled]="ownerForm.invalid">Salvar</button>
+    </form>
+</div>
