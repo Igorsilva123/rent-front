@@ -2,16 +2,16 @@
     <h2>Registrar Proprietário</h2>
     <form (ngSubmit)="onSubmit()" #ownerForm="ngForm" class="form-owner">
         <label>Nome:</label>
-        <input type="text" name="name" [(ngModel)]="owner.name" required />
+        <input type="text" name="name" placeholder="Seu nome completo" [(ngModel)]="owner.name" required />
 
         <label>Email:</label>
-        <input type="email" name="email" [(ngModel)]="owner.email" required />
+        <input type="email" name="email" placeholder="Seu e-mail" [(ngModel)]="owner.email" required />
 
         <label>Senha:</label>
-        <input type="password" name="password" [(ngModel)]="owner.password" required />
+        <input type="password" name="password" placeholder="Deve ter no mínimo sete caracteres" [(ngModel)]="owner.password" required />
 
         <label>Telefone:</label>
-        <input type="text" name="phone" [(ngModel)]="owner.phone" required />
+        <input type="text" name="phone" placeholder="Seu telefone" [(ngModel)]="owner.phone" required />
 
         <button type="submit" [disabled]="ownerForm.invalid">Salvar</button>
     </form>
